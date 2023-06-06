@@ -32,7 +32,8 @@ const Items = () => {
   return (
     <>
       <h1>Mi menu</h1>
-      { name }
+      <p>{ name }</p>
+      <p><Link to="details">Más Detalles</Link></p>
       <Outlet />
     </>
   )
