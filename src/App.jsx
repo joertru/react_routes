@@ -12,8 +12,8 @@ function App() {
     <div>
      <header>
         <nav>
-          <li><a href="/">Home</a></li>
-          <li><a href="/About">About</a></li>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/About">About</Link></li>
         </nav>
       </header>
       <h1>Rutas</h1>
