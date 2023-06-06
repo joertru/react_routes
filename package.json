@@ -27,7 +27,7 @@
   },
   "eslintConfig": {
     "extends": [
-      "./node_modules/standard/"
+      "./node_modules/standard/eslintrc.json"
     ]
   }
 }
