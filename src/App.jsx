@@ -1,18 +1,18 @@
 import { useState } from 'react'
+import { Route } from 'react-router-dom'
 import './App.css'
 
-const home = () => <h1>Inicio</h1>
-const about = () => <h2>About</h2>
+const Home = () => <h1>Inicio</h1>
+const About = () => <h2>About</h2>
 
 function App() {
 
   return (
-    <>
-      <div>
-         <img src={viteLogo} className="logo" alt="Vite logo" />
-         <h1>Rutas</h1>
-      </div>
-    </>
+    <div>
+      <Route path='/' element={<Home/>} />
+      <Route path='/about' element={<About/>} />
+    </div>
+
   )
 }
 
