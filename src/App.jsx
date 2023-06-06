@@ -10,6 +10,12 @@ function App() {
   return (
     <div>
       <h1>Rutas</h1>
+      <header>
+        <nav>
+          <li><a href="/">Home</a></li>
+          <li><a href="/About">About</a></li>
+        </nav>
+      </header>
       <Routes>
         <Route path='/' element={<Home/>} />
         <Route path='/about' element={<About/>} />
