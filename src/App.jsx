@@ -1,5 +1,5 @@
 ///import { useState } from 'react'
-import { Route, Routes, Link, useParams } from 'react-router-dom'
+import { Route, Routes, Link, useParams, Outlet } from 'react-router-dom'
 import './App.css'
 import 'simpledotcss'
 
@@ -33,6 +33,16 @@ const Items = () => {
     <>
       <h1>Mi menu</h1>
       { name }
+      <Outlet />
+    </>
+  )
+}
+
+const DetailsMenu = () => {
+  const { name } = useParams()
+  return (
+    <>
+      <blockquote>Estos son los detalles de { name }</blockquote>
     </>
   )
 }
@@ -53,7 +63,9 @@ function App() {
         <Route path='/' element={<Home/>} />
         <Route path='/about' element={<About/>} />
         <Route path='/menus' element={<Menu/>} />
-        <Route path='/menu/:name' element={<Items/>} />
+        <Route path='/menu/:name' element={<Items/>}>
+          <Route path='details' element={<DetailsMenu/>} />
+        </Route>
       </Routes>
     </div>
 
